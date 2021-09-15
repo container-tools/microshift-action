@@ -1,0 +1,14 @@
+name: "Microshift OpenShift Cluster"
+description: "Create a Microshift cluster"
+author: "Container Tools developers"
+branding:
+  color: red
+  icon: circle
+inputs:
+  version:
+    description: "The Microshift version to use (default: latest version)"
+    required: false
+runs:
+  using: "node12"
+  main: "main.js"
+  post: "cleanup.js"
