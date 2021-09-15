@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Microshift OpenShift Cluster
-        uses: tadayosi/microshift-action@v0
+        uses: tadayosi/microshift-action@v0.1
 ```
 
 This uses [@tadayosi/microshift-action](https://www.github.com/tadayosi/microshift-action) GitHub Action to spin up a [Microshift](https://github.com/redhat-et/microshift) OpenShift cluster on every Pull Request.
