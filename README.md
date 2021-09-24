@@ -1,6 +1,6 @@
 # Microshift OpenShift Cluster Action
 
-[![](https://github.com/tadayosi/microshift-action/workflows/Test/badge.svg?branch=main)](https://github.com/tadayosi/microshift-action/actions)
+[![](https://github.com/container-tools/microshift-action/workflows/Test/badge.svg?branch=main)](https://github.com/container-tools/microshift-action/actions)
 
 A GitHub Action for starting an OpenShift cluster using [Microshift](https://github.com/redhat-et/microshift).
 
@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Microshift OpenShift Cluster
-        uses: tadayosi/microshift-action@v0.1
+        uses: container-tools/microshift-action@v0.1
 ```
 
-This uses [@tadayosi/microshift-action](https://www.github.com/tadayosi/microshift-action) GitHub Action to spin up a [Microshift](https://github.com/redhat-et/microshift) OpenShift cluster on every Pull Request.
+This uses [@container-tools/microshift-action](https://www.github.com/container-tools/microshift-action) GitHub Action to spin up a [Microshift](https://github.com/redhat-et/microshift) OpenShift cluster on every Pull Request.

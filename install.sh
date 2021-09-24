@@ -176,6 +176,8 @@ get_microshift() {
     if [ "$ARCH" = "x86_64" ]; then
         curl -LO https://github.com/redhat-et/microshift/releases/download/$VERSION/microshift-linux-amd64
         curl -LO https://github.com/redhat-et/microshift/releases/download/$VERSION/release.sha256
+        # Once the issue below is fixed, these custom install steps can be removed
+        # https://github.com/redhat-et/microshift/issues/263
         curl -LO https://github.com/tadayosi/microshift/releases/download/test-ubuntu/microshift-ubuntu.tar.xz
         tar xf microshift-ubuntu.tar.xz
     else
