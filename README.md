@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Microshift OpenShift Cluster
-        uses: container-tools/microshift-action@v0.1
+        uses: container-tools/microshift-action@v0.2
 ```
 
 This uses [@container-tools/microshift-action](https://www.github.com/container-tools/microshift-action) GitHub Action to spin up a [Microshift](https://github.com/redhat-et/microshift) OpenShift cluster on every Pull Request.
