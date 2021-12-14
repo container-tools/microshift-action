@@ -180,16 +180,20 @@ get_kubectl() {
 
 # Download and install microshift
 get_microshift() {
-    curl -LO https://github.com/redhat-et/microshift/releases/download/$VERSION/microshift-linux-$ARCH
-    curl -LO https://github.com/redhat-et/microshift/releases/download/$VERSION/release.sha256
+    # Temporarily comment out to earn disk space
+    #curl -LO https://github.com/redhat-et/microshift/releases/download/$VERSION/microshift-linux-$ARCH
+    #curl -LO https://github.com/redhat-et/microshift/releases/download/$VERSION/release.sha256
 
     # Once the issue below is fixed, these custom install steps can be removed
     # https://github.com/redhat-et/microshift/issues/263
+    cd /tmp
     curl -LO https://github.com/tadayosi/microshift/releases/download/test-ubuntu/microshift-ubuntu.tar.xz
+    curl -LO https://github.com/tadayosi/microshift/releases/download/test-ubuntu/release.sha256
     tar xf microshift-ubuntu.tar.xz
+    rm microshift-ubuntu.tar.xz
 
-    BIN_SHA="$(sha256sum microshift-linux-$ARCH | awk '{print $1}')"
-    KNOWN_SHA="$(grep "microshift-linux-$ARCH" release.sha256 | awk '{print $1}')"
+    BIN_SHA="$(sha256sum microshift-ubuntu | awk '{print $1}')"
+    KNOWN_SHA="$(grep "microshift-ubuntu" release.sha256 | awk '{print $1}')"
 
     if [[ "$BIN_SHA" != "$KNOWN_SHA" ]]; then 
         echo "SHA256 checksum failed" && exit 1
