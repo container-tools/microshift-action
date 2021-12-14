@@ -1,8 +1,8 @@
-# Microshift OpenShift Cluster Action
+# MicroShift OpenShift Cluster Action
 
 [![](https://github.com/container-tools/microshift-action/workflows/Test/badge.svg?branch=main)](https://github.com/container-tools/microshift-action/actions)
 
-A GitHub Action for starting an OpenShift cluster using [Microshift](https://github.com/redhat-et/microshift).
+A GitHub Action for starting an OpenShift cluster using [MicroShift](https://github.com/redhat-et/microshift).
 
 ## Usage
 
@@ -15,7 +15,7 @@ For more information, reference the GitHub Docs for [Understanding GitHub Action
 
 For more information on inputs, see the [API Documentation](https://developer.github.com/v3/repos/releases/#input)
 
-- `version`: The Microshift version to use (default: latest version)
+- `version`: The MicroShift version to use (default: latest version)
 
 ### Example Workflow
 
@@ -30,8 +30,8 @@ jobs:
   create-cluster:
     runs-on: ubuntu-latest
     steps:
-      - name: Microshift OpenShift Cluster
+      - name: MicroShift OpenShift Cluster
         uses: container-tools/microshift-action@v0.2.1
 ```
 
-This uses [@container-tools/microshift-action](https://www.github.com/container-tools/microshift-action) GitHub Action to spin up a [Microshift](https://github.com/redhat-et/microshift) OpenShift cluster on every Pull Request.
+This uses [@container-tools/microshift-action](https://www.github.com/container-tools/microshift-action) GitHub Action to spin up a [MicroShift](https://github.com/redhat-et/microshift) OpenShift cluster on every Pull Request.

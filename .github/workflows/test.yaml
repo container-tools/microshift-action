@@ -23,7 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Create Microshift cluster
+      - name: Create MicroShift cluster
         uses: ./
 
       - name: Test
@@ -42,7 +42,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Create Microshift cluster with custom version
+      - name: Create MicroShift cluster with custom version
         uses: ./
         with:
           version: "4.7.0-0.microshift-2021-08-10-163759"
