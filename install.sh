@@ -109,10 +109,6 @@ crio_conf() {
     }
 }
 EOF'
-    
-     if [ "$DISTRO" == "rhel" ]; then
-        sudo sed -i 's|/usr/libexec/crio/conmon|/usr/bin/conmon|' /etc/crio/crio.conf 
-     fi
 }
 
 # Start CRI-O
